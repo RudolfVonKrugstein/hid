@@ -163,7 +163,7 @@ func (dev *Device) Write(b []byte) (int, error) {
 		return 0, ErrDeviceClosed
 	}
 	// // Prepend a HID report ID on Windows, other OSes don't need it
-	// var report []byte
+	var report []byte
 	// if runtime.GOOS == "windows" {
 	//	report = append([]byte{0x00}, b...)
 	// } else {
